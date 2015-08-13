@@ -1,9 +1,13 @@
-Ionic Box
+Cordova Box
 =============================
 
-Ionic Box is a ready-to-go hybrid development environment for building mobile apps with Ionic, Cordova, and Android. Ionic Box was built to make it easier for developers to build Android versions of their app, and especially for Windows users to get a complete dev environment set up without all the headaches.
+Ionic Box is a ready-to-go hybrid development environment for building mobile
+apps with Cordova and Android. Cordova Box was built to make it easier
+for developers to build Android versions of their app, and especially for
+Windows users to get a complete dev environment set up without all the
+headaches.
 
-For iOS developers, Ionic Box won't do much for you right now unless you are having trouble installing the Android SDK, and Ionic Box cannot be used for iOS development for a variety of legal reasons (however, the `ionic package` command in beta will soon fix that).
+Cordova Box is a fork of [Ionic Box](https://github.com/driftyco/ionic-box).
 
 ### Installation
 
@@ -17,7 +21,7 @@ $ vagrant up
 $ vagrant ssh
 ```
 
-The username for vagrant is `vagrant` and the password is `vagrant`. 
+The username for vagrant is `vagrant` and the password is `vagrant`.
 
 This will download and install the image, and then go through the dependencies and install them one by one. `vagrant ssh` will connect you to the image and give you a bash prompt. Once everything completes, you'll have a working box to build your apps on Android.
 
@@ -35,14 +39,3 @@ If that does not work, or shows `????? permissions`, then run:
 sudo /home/vagrant/android-sdk-linux/platform-tools/adb kill-server
 sudo /home/vagrant/android-sdk-linux/platform-tools/adb start-server
 ```
-
-### Pre-built image
-
-We are testing a pre-built Vagrant cloud image which should be faster than using the Vagrantfile method above. To try it, create a folder where you want to init your dev environment (a great place for this would be in the project folder of your app). Then run:
-
-```bash
-$ vagrant init drifty/ionic-android
-$ vagrant up
-```
-
-If you try this method and it works or you encounter issues, please comment on issue #7.
