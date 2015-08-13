@@ -30,12 +30,12 @@ This will download and install the image, and then go through the dependencies a
 The image also has support for connected USB Android devices. To test whether devices are connected, you can run (from the box):
 
 ```bash
-$ sudo /home/vagrant/android-sdk-linux/platform-tools/adb devices
+$ adb devices
 ```
 
 If that does not work, or shows `????? permissions`, then run:
 
 ```bash
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb kill-server
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb start-server
+adb kill-server
+adb start-server
 ```
