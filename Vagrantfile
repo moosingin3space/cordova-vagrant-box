@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ubuntu/trusty64"
-  config.vm.hostname = "ionic-android"
+  config.vm.hostname = "cordova-android"
 
   config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.provision :shell, run: "always", inline: $init
@@ -59,13 +59,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
     config.vm.provider "virtualbox" do |vb|
      vb.customize ["modifyvm", :id, "--usb", "on"]
+     vb.customize ["modifyvm", :id, "--usbehci", "on"]
      vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "samsung", "--vendorid", "0x04e8"]
      vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
   #   # Don't boot with headless mode
   #   vb.gui = true
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
-  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
+     vb.customize ["modifyvm", :id, "--memory", "1024"]
     end
   #
   # View the documentation for the provider you're using for more

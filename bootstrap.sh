@@ -6,7 +6,7 @@ ANDROID_SDK=http://dl.google.com/android/$ANDROID_SDK_FILENAME
 #sudo apt-get install python-software-properties
 #sudo add-apt-repository ppa:webupd8team/java
 apt-get update
-apt-get install -y npm git openjdk-7-jdk ant expect
+apt-get install -y npm git openjdk-7-jdk ant expect libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5
 npm install -g n
 n stable
 
